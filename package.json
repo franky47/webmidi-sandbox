@@ -1,0 +1,29 @@
+{
+  "name": "midi-sandbox",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts": "1.1.0",
+    "webmidi": "^2.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "deploy": "surge -d https://midi-sandbox.surge.sh -p ./build",
+    "release": "yarn build && yarn deploy"
+  },
+  "devDependencies": {
+    "standard": "^10.0.3",
+    "surge": "^0.19.0"
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "globals": [
+      "describe", "test", "expect", "it"
+    ]
+  }
+}
